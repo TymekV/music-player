@@ -10,12 +10,18 @@ export const container = css({
     borderTopColor: 'border',
     backgroundColor: 'tile.0',
     display: 'flex',
+});
+
+export const containerBody = css({
+    display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '20px',
+    flex: 1,
+    position: 'relative',
 });
 
-export const metadataContainer = css({
+export const left = css({
     display: 'flex',
     alignItems: 'center',
 });
@@ -31,4 +37,8 @@ export const cover = css({
     borderWidth: '1px',
     borderColor: 'border',
     marginRight: '15px'
+});
+
+export const center = css({
+
 });

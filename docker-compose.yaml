@@ -1,0 +1,10 @@
+version: '3'
+services:
+  music-player:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: music-player
+    ports:
+      - '8857:3000'
+    restart: always

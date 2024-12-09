@@ -1,7 +1,6 @@
 'use client'
 import { Poppins } from 'next/font/google';
 import "./globals.css";
-import { Metadata } from 'next';
 import Head from 'next/head';
 import NowPlayingProvider from '@/lib/providers/NowPlayingProvider';
 import Player from '@/lib/components/Player';
