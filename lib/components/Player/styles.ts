@@ -8,5 +8,27 @@ export const container = css({
     height: '100px',
     borderTopWidth: '1px',
     borderTopColor: 'border',
-    backgroundColor: 'tile.0'
+    backgroundColor: 'tile.0',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '20px',
+});
+
+export const metadataContainer = css({
+    display: 'flex',
+    alignItems: 'center',
+});
+
+export const metadata = css({
+    gap: '3px',
+});
+
+export const cover = css({
+    width: '60px',
+    height: '60px',
+    borderRadius: '5px',
+    borderWidth: '1px',
+    borderColor: 'border',
+    marginRight: '15px'
 });
