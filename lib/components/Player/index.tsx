@@ -14,10 +14,10 @@ export default function Player() {
         <div className={container}>
             <div className={containerBody}>
                 <div className={left}>
-                    <img
-                        src={nowPlaying.cover}
+                    {nowPlaying.cover && <img
+                        src={`/media/covers/${nowPlaying.cover}`}
                         className={cover}
-                    />
+                    />}
                     <div className={metadata}>
                         <Title size="md" weight={600}>{nowPlaying.title}</Title>
                         <Subtitle size="sm">{nowPlaying.artist}</Subtitle>

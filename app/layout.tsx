@@ -5,6 +5,7 @@ import Head from 'next/head';
 import NowPlayingProvider from '@/lib/providers/NowPlayingProvider';
 import Player from '@/lib/components/Player';
 import PlaybackStateProvider from '@/lib/providers/PlaybackStateProvider';
+import LibraryProvider from '@/lib/providers/LibraryProvider';
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -29,12 +30,14 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </Head>
             <body className={poppins.variable}>
-                <NowPlayingProvider>
-                    <PlaybackStateProvider>
-                        {children}
-                        <Player />
-                    </PlaybackStateProvider>
-                </NowPlayingProvider>
+                <LibraryProvider>
+                    <NowPlayingProvider>
+                        <PlaybackStateProvider>
+                            {children}
+                            <Player />
+                        </PlaybackStateProvider>
+                    </NowPlayingProvider>
+                </LibraryProvider>
             </body>
         </html>
     );

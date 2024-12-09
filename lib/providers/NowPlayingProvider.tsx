@@ -15,9 +15,9 @@ export type NowPlayingContextType = [
 ];
 
 const initialNowPlaying: NowPlayingType = {
-    title: 'LosT',
-    artist: 'Bring Me The Horizon',
-    cover: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQApqe5pWAozxnwWCfHkZ6-LKgQqXKrYdkK2w&s',
+    title: 'Not Playing',
+    artist: '',
+    cover: '',
     path: '',
     album: '',
 }
