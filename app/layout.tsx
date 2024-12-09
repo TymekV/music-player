@@ -1,7 +1,10 @@
+'use client'
 import { Poppins } from 'next/font/google';
 import "./globals.css";
 import { Metadata } from 'next';
 import Head from 'next/head';
+import NowPlayingProvider from '@/lib/providers/NowPlayingProvider';
+import Player from '@/lib/components/Player';
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -10,10 +13,10 @@ const poppins = Poppins({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 });
 
-export const metadata: Metadata = {
-    title: 'Music Player',
-    description: 'A simple music player app built with Next.js',
-};
+// export const metadata: Metadata = {
+//     title: 'Music Player',
+//     description: 'A simple music player app built with Next.js',
+// };
 
 export default function RootLayout({
     children,
@@ -26,7 +29,10 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </Head>
             <body className={poppins.variable}>
-                {children}
+                <NowPlayingProvider>
+                    {children}
+                    <Player />
+                </NowPlayingProvider>
             </body>
         </html>
     );

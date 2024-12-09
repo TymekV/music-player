@@ -29,6 +29,10 @@ export default defineConfig({
           background: {
             value: '#0A0A0B',
           },
+          tile: {
+            0: { value: '#121212' },
+            1: { value: '#242424' },
+          },
           green: {
             0: { value: '#e6ffee' },
             1: { value: '#d3f9e0' },
