@@ -1,0 +1,39 @@
+{
+    "files": [
+        {
+            "path": "last-liar-standing.aac",
+            "title": "Last Liar Standing",
+            "author": "Foreground Eclipse",
+            "cover": "01.jpg",
+            "album": "Stories That Last Through The Sleepless Nights"
+        },
+        {
+            "path": "from-under-cover.aac",
+            "title": "From Under Cover (Caught Up In A Love Song)",
+            "author": "Foreground Eclipse",
+            "cover": "01.jpg",
+            "album": "Stories That Last Through The Sleepless Nights"
+        },
+        {
+            "path": "wandering-never-wondering.aac",
+            "title": "Wandering, Never Wondering (There Exists A Shade)",
+            "author": "Foreground Eclipse",
+            "cover": "01.jpg",
+            "album": "Stories That Last Through The Sleepless Nights"
+        },
+        {
+            "path": "calm-eyes.aac",
+            "title": "Calm Eyes Fixed On Me, Screaming",
+            "author": "Merami",
+            "cover": "02.jpg",
+            "album": "Tears Will Become Melodies Tonight"
+        },
+        {
+            "path": "the-distant-journey.aac",
+            "title": "THE DISTANT JOURNEY TO YOU",
+            "author": "Merami",
+            "cover": "03.jpg",
+            "album": "Wishes Hidden In The Foreground Noises"
+        }
+    ]
+}

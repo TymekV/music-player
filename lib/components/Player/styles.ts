@@ -40,5 +40,19 @@ export const cover = css({
 });
 
 export const center = css({
+    position: 'absolute',
+    left: '0px',
+    right: '0px',
+    top: '0px',
+    bottom: '0px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDir: 'column',
+});
 
+export const controls = css({
+    display: 'flex',
+    gap: '10px',
+    alignItems: 'center'
 });

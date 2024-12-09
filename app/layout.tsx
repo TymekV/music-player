@@ -4,6 +4,7 @@ import "./globals.css";
 import Head from 'next/head';
 import NowPlayingProvider from '@/lib/providers/NowPlayingProvider';
 import Player from '@/lib/components/Player';
+import PlaybackStateProvider from '@/lib/providers/PlaybackStateProvider';
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -29,8 +30,10 @@ export default function RootLayout({
             </Head>
             <body className={poppins.variable}>
                 <NowPlayingProvider>
-                    {children}
-                    <Player />
+                    <PlaybackStateProvider>
+                        {children}
+                        <Player />
+                    </PlaybackStateProvider>
                 </NowPlayingProvider>
             </body>
         </html>
