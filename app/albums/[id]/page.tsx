@@ -7,15 +7,20 @@ import Title from "@/lib/components/Title";
 import { css } from "@/styled-system/css";
 import { IconDisc } from "@tabler/icons-react";
 import Track from "@/lib/components/Track";
-import { use } from "react";
+import { use, useMemo } from "react";
 import Subtitle from "@/lib/components/Subtitle";
+import InlineTrack from "@/lib/components/InlineTrack";
 
 export default function Album({ params }: { params: Promise<{ id: number }> }) {
-    const { albums } = useLibrary();
+    const { albums, library } = useLibrary();
+
+    const [nowPlaying, setNowPlaying] = useNowPlaying();
 
     const { id } = use(params);
 
-    const album = albums[id] ?? {};
+    const album = useMemo(() => albums[id] ?? {}, [albums, id]);
+
+    const albumTracks = useMemo(() => library.filter(x => x.album == album.title), [library, album]);
 
     return (
         <Container>
@@ -28,7 +33,7 @@ export default function Album({ params }: { params: Promise<{ id: number }> }) {
             </div>
             <img src={`/media/covers/${album.cover}`} className={blur} />
             <div className={tracks}>
-                {/* {albums.map((t, i) => <Track key={i} {...t} />)} */}
+                {albumTracks.map((t, i) => <InlineTrack key={i} {...t} onClick={() => setNowPlaying(t)} />)}
             </div>
         </Container>
     );
@@ -55,10 +60,6 @@ const blur = css({
 });
 
 const tracks = css({
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    columnGap: '15px',
-    rowGap: '15px',
     marginTop: '15px'
 });
 
