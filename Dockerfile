@@ -15,13 +15,13 @@ RUN \
     else echo "Lockfile not found." && exit 1; \
     fi
 
-# Generate PandaCSS code
-RUN npx panda codegen
-
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
+
+# Copy PandaCSS's generated styles
+COPY --from=deps /app/styled-system ./styled-system
 COPY . .
 
 # Next.js collects completely anonymous telemetry data about general usage.
