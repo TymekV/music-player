@@ -7,6 +7,7 @@ export type NowPlayingType = {
     cover: string;
     path: string;
     album: string;
+    isEmpty?: boolean;
 };
 
 export type NowPlayingContextType = [
@@ -15,11 +16,12 @@ export type NowPlayingContextType = [
 ];
 
 const initialNowPlaying: NowPlayingType = {
-    title: 'Not Playing',
+    title: '',
     artist: '',
     cover: '',
     path: '',
     album: '',
+    isEmpty: true,
 }
 
 export const NowPlayingContext = createContext<NowPlayingContextType>([
