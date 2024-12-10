@@ -3,7 +3,7 @@ import { IconDisc, IconHome } from "@tabler/icons-react";
 import Subtitle from "../Subtitle";
 import Title from "../Title";
 import Option, { OptionProps } from "./Option";
-import { options, sidebar, sidebarContainer, sidebarHeader } from "./styles";
+import { content, options, sidebar, sidebarContainer, sidebarHeader } from "./styles";
 import { usePathname } from "next/navigation";
 
 export type SidebarProps = {
@@ -42,7 +42,9 @@ export default function Sidebar({ children }: SidebarProps) {
                     <Subtitle size="xs">Built by Tymek Vonau in Next.js</Subtitle>
                 </div>
             </div>
-            {children}
+            <div className={content}>
+                {children}
+            </div>
         </div>
     )
 }

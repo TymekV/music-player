@@ -7,7 +7,8 @@ const globalCss = defineGlobalStyles({
     height: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    color: 'text.0'
+    color: 'text.0',
+    maxW: '100vw',
   }
 });
 

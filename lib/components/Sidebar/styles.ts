@@ -4,12 +4,14 @@ export const sidebarContainer = css({
     display: 'flex',
     height: '100%',
     zIndex: 999,
+    maxW: '100vw',
 });
 
 export const sidebar = css({
     borderRightWidth: '1px',
     borderRightColor: 'border',
     width: '250px',
+    minW: '250px',
     height: '100%',
     padding: '25px',
     display: 'flex',
@@ -30,3 +32,7 @@ export const options = css({
     flexDir: 'column',
     gap: '2px',
 })
+
+export const content = css({
+    flex: 1,
+});

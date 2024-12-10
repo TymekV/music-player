@@ -7,6 +7,7 @@ import Title from "@/lib/components/Title";
 import Subtitle from "@/lib/components/Subtitle";
 import { css } from "@/styled-system/css";
 import { IconMusic, IconPlayerPlay } from "@tabler/icons-react";
+import Track from "@/lib/components/Track";
 
 export default function Home() {
     const library = useLibrary();
@@ -24,6 +25,9 @@ export default function Home() {
             {/* <div onClick={() => {
                 setNowPlaying(library[0]);
             }}>PLAY</div> */}
+            <div className={tracks}>
+                {library.map(t => <Track key={t.path} {...t} onClick={() => setNowPlaying(t)} />)}
+            </div>
         </Container>
     );
 }
@@ -45,4 +49,12 @@ const blur = css({
     zIndex: -1,
     filter: 'blur(100px) brightness(.3)',
     borderRadius: '99999999px'
+});
+
+const tracks = css({
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    columnGap: '15px',
+    rowGap: '15px',
+    marginTop: '15px'
 });
