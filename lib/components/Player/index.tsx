@@ -22,13 +22,13 @@ export default function Player() {
                         <Title size="md" weight={600}>{nowPlaying.title}</Title>
                         <Subtitle size="sm">{nowPlaying.artist}</Subtitle>
                     </div>
-                </div>
-            </div>
-            <div className={center}>
-                <div className={controls}>
-                    <PlayerButton icon={IconPlayerTrackPrevFilled} size="lg" />
-                    <PlayerButton primary icon={playbackState.paused ? IconPlayerPlayFilled : IconPlayerPauseFilled} size="xl" onClick={() => setPlaybackState(x => ({ ...x, paused: !x.paused }))} />
-                    <PlayerButton icon={IconPlayerTrackNextFilled} size="lg" />
+                    <div className={center}>
+                        <div className={controls}>
+                            <PlayerButton icon={IconPlayerTrackPrevFilled} size="lg" />
+                            <PlayerButton primary icon={playbackState.paused ? IconPlayerPlayFilled : IconPlayerPauseFilled} size="xl" onClick={() => setPlaybackState(x => ({ ...x, paused: !x.paused }))} />
+                            <PlayerButton icon={IconPlayerTrackNextFilled} size="lg" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

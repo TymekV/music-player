@@ -6,6 +6,7 @@ import NowPlayingProvider from '@/lib/providers/NowPlayingProvider';
 import Player from '@/lib/components/Player';
 import PlaybackStateProvider from '@/lib/providers/PlaybackStateProvider';
 import LibraryProvider from '@/lib/providers/LibraryProvider';
+import Sidebar from '@/lib/components/Sidebar';
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -33,7 +34,9 @@ export default function RootLayout({
                 <LibraryProvider>
                     <NowPlayingProvider>
                         <PlaybackStateProvider>
-                            {children}
+                            <Sidebar>
+                                {children}
+                            </Sidebar>
                             <Player />
                         </PlaybackStateProvider>
                     </NowPlayingProvider>
