@@ -10,7 +10,7 @@ import { IconMusic, IconPlayerPlay } from "@tabler/icons-react";
 import Track from "@/lib/components/Track";
 
 export default function Home() {
-    const library = useLibrary();
+    const { library } = useLibrary();
 
     const [nowPlaying, setNowPlaying] = useNowPlaying();
 
