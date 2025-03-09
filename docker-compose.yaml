@@ -8,6 +8,8 @@ services:
     ports:
       - '8857:3000'
     restart: always
+    networks:
+      - proxy
     labels:
       traefik.enable: true
       traefik.port: 3000
